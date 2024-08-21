@@ -45,18 +45,10 @@ class Solution
 
   public void printNos(int N)       
   { 
-      printNumbers(1, N);  // Start from 1 and print up to N
-      
-      
+      if(N<1)
+        return;
+     printNos(N-1);
+     System.out.print(N + " ");
   }
-
-    private void printNumbers(int i, int N) {
-        if (i > N) {
-            return;  // Base condition to stop recursion
-        }
-
-        System.out.print(i + " ");
-        printNumbers(i + 1, N);  // Recursive call with incremented i
-    }
 }
 
